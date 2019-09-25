@@ -47,7 +47,7 @@ array.each do |row|
         </i18n>
         STR
       )
-      File.open(path, "w") { |f| f.write(buffer) }
+      File.open(path, "w") { |f| f.write(buffer.strip + "\n") }
     end
     file = row[0].sub('file:', '')
     obj = {}
